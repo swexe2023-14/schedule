@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  get 'top/main'
-  post 'top/login'
-  root 'top#main'
-=======
+  get 'mypages/index'
   get 'users/index'
-  root 'users#index'
+  root 'mypages#index'
   resources :users
->>>>>>> signup
 end
