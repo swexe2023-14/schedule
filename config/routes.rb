@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get 'users/index'
   root 'mypages#index'
   resources :users
+  resources :groups
 end
