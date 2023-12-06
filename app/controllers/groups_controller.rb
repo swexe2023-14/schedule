@@ -26,8 +26,14 @@ class GroupsController < ApplicationController
     end
     
     def update
-        
+        if @group.update(group_params)
+            redirect_to 
+        else
+            render "edit"
+        end
     end
     
-    
+    def group_params
+      params.require(:group).permit(:name)
+    end
 end
