@@ -10,9 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema[7.0].define(version: 2023_11_15_085937) do
-=======
 ActiveRecord::Schema[7.0].define(version: 2023_11_29_063629) do
   create_table "group_users", force: :cascade do |t|
     t.integer "users_id", null: false
@@ -28,7 +25,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_29_063629) do
     t.datetime "updated_at", null: false
   end
 
->>>>>>> 845aabc9dae9b93a68ab4f70b81712148507e931
   create_table "users", force: :cascade do |t|
     t.string "uid"
     t.string "pass"
