@@ -1,9 +1,15 @@
-<!DOCTYPE html>
-<html>
-    <body>
-        <p><%= link_to 'ホーム画面へ' %></p>
-        <p><%= link_to 'グループ作成' %></p>
-        <p><%= link_to 'ID変更' %></p>
-        <p><%= link_to 'ログアウト' , top_logout_path%></p>
-    </body>
-</html>
+    <div class="menu-container">
+        <input type="checkbox" id="menu-toggle">
+        <nav class="menu">
+            <ul>
+                <li><a href="#"><%= link_to 'ホーム画面へ' %></a></li>
+                <li><a href="#"><%= link_to 'グループ作成' %></a></li>
+                <li><a href="#"><%= link_to 'ログアウト' , top_logout_path%></a></li>
+            </ul>
+        </nav>
+        <label for="menu-toggle" class="menu-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+    </div>

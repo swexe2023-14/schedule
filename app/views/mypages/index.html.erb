@@ -1,15 +1,15 @@
-<h1>マイページ</h1>
-<p>ようこそ <%= @user.uid %> さん</p>
 <div class="main">
-
-  
+    
     <div id="contents1">
         <%= render "sidebar" %>
     </div>
+
     
     <div class="contents2">
+        <h1>マイページ</h1>
+        <p>ようこそ <%= @user.uid %> さん</p>
+        <hr>
         <p>自分の予定</p>
-
         <hr>
 
         <p>グループ一覧</p>

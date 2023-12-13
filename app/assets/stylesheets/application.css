@@ -7,3 +7,71 @@ height: 150px;
 display: flex;
 gap: 50px;
 }
+
+/* 全体のスタイル */
+body {
+  margin: 10px;
+}
+
+/* メニューコンテナ全体のスタイル */
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-button {
+  display: block;
+  position: fixed;
+  cursor: pointer;
+  top: 30px;
+  left: 20px;
+}
+
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 3px 0;
+  background-color: black;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 10%;
+  height: 100%;
+  background-color: #f3f3f3;
+  transition: 0.2s;
+}
+
+#menu-toggle:checked ~ .menu {
+  left: 0;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 40px;
+  color: pink;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: blue;
+  font-size: 18px;
+  display: block;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.menu ul li a:hover {
+  color: #bf7497;
+}
