@@ -9,7 +9,7 @@ class GroupsController < ApplicationController
     end
     
     def create
-        @group = Group.new(name: params[:group][:name],memberid: params[:user][:uid])
+        @group = Group.new(name: params[:group][:name])
         if @group.save
             redirect_to groups_path
         else

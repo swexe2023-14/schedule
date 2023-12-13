@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-    has_many :group_users, dependent: :destroy
-    has_many :groups, through: :group_users
+    has_many :joins
+    has_many :join_groups, through: :joins, source: :group
 end

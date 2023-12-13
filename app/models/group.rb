@@ -1,7 +1,4 @@
 class Group < ApplicationRecord
-    has_many :group_users, dependent: :destroy
-    has_many :users, through: :group_users
-    
-    validates :name, presence: true
+    has_many :joins
+    has_many :join_users, through: :joins, source: :user
 end
-

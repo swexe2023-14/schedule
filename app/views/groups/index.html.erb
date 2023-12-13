@@ -2,5 +2,7 @@
 <% @groups.each do |e| %>
 <p>
     グループ名：<%= e.name %>
+    <%= link_to '加入', joins_path(group_id: e.id), data: {"turbo-method": :post} %>
+    <%= link_to '退会', join_path(e), data: {"turbo-method": :delete} %>
 </p>
 <% end %>
