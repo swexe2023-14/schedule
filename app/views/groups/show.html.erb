@@ -1,0 +1,4 @@
+<%= @group.name %>
+<% if @group.owner_id == current_user.id %>
+    <%= link_to 'Edit', edit_group_path(@group) %>
+<% end %>

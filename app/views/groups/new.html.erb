@@ -1,2 +1,6 @@
 <h1>グループ作成</h1>
-<%= form_with model:group,　local:true do |f| %>
+<%= form_for @group, url: {action: :create} do |f| %>
+    <%= f.label :name, 'グループ名' %>
+    <%= f.text_field :name %>
+    <%= f.submit '登録' %>
+<% end %>

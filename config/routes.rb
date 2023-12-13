@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   get 'top/logout'
   get 'mypages/index'
   get 'users/index'
+
   root 'users#index'
   resources :users
+  resources :groups
 end
+
