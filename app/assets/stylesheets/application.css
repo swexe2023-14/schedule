@@ -20,6 +20,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .menu-button {
@@ -51,6 +52,7 @@ body {
   height: 100%;
   background-color: #f3f3f3;
   transition: 0.2s;
+  overflow-y: auto;
 }
 
 #menu-toggle:checked ~ .menu {
@@ -75,3 +77,9 @@ body {
 .menu ul li a:hover {
   color: #bf7497;
 }
+
+/*
+ *= require simple_calendar #こちらを追加
+ *= require_tree .
+ *= require_self
+ */
