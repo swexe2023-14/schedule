@@ -13,5 +13,10 @@
         <hr>
 
         <p>グループ一覧</p>
+        <% @groups.each do |e| %>
+        <p>
+            <%= link_to e.name %>
+        </p>
+        <% end %>
     </div>
 </div>
