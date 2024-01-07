@@ -10,13 +10,10 @@
             <% else %>
                 <%= link_to '加入', joins_path(group_id: e.id), data: {"turbo-method": :post} %>
             <% end %>
+            メンバー数 : <%= Join.where(group_id: e.id).count %>
         </p>
         <% end %>
-<<<<<<< HEAD
         <%=link_to '戻る', mypages_index_path %>
-=======
-        <%=link_to '戻る', :back%><br>
->>>>>>> g
         <%= link_to 'グループ作成', new_group_path %>
     </div>
 </div>

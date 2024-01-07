@@ -2,6 +2,7 @@ class GroupsController < ApplicationController
     
     def index
         @groups = Group.all
+        @joins = Join.where(group_id: params[:group_id])
     end
     
     def new
