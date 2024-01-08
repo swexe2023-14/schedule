@@ -13,4 +13,13 @@ class Group < ApplicationRecord
     def joined?(user)
         join_users.include?(user)
     end
+    
+    def member_count
+        join_users.count
+    end
+    
+    def member_names
+        join_users.pluck(:uid).join(', ')
+    end
+    
 end

@@ -6,19 +6,33 @@
     
     <div class="contents2">
         <h1>グループ画面</h1>
-        <% @groups.each do |e| %>
-        <p>
-            グループ名：<%= e.name %>
-            <%= link_to "削除", group_path(e), data: {"turbo-method": :delete} %>
-            <% if e.joined?(current_user) %>
-                <%= link_to '退会', join_path(e), data: {"turbo-method": :delete} %>
-            <% else %>
-                <%= link_to '加入', joins_path(group_id: e.id), data: {"turbo-method": :post} %>
-            <% end %>
-            メンバー数 : <%= Join.where(group_id: e.id).count %>
-        </p>
-        <% end %>
-        <%=link_to '戻る', mypages_index_path %>
-        <%= link_to 'グループ作成', new_group_path %>
     </div>
+    <hr>
+    <table class="group-table">
+    <tr>
+      <th>グループ名</th>
+      <th>メンバー数</th>
+      <th>メンバー名</th>
+      <th>削除</th>
+      <th>退会</th>
+    </tr>
+
+    <% @groups.each do |e| %>
+      <tr>
+        <td><%= e.name %></td>
+        <td><%= e.member_count %></td>
+        <td><%= e.member_names %></td>
+        <td><%= link_to '削除', group_path(e), data: {"turbo-method": :delete} %></td>
+        <td>
+            <% if e.joined?(current_user) %>
+              <%= link_to '退会', join_path(e), data: {"turbo-method": :delete} %>
+            <% else %>
+              <%= link_to '加入', joins_path(group_id: e.id), data: {"turbo-method": :post} %>
+            <% end %>
+        </td>
+      </tr>
+    <% end %>
+    </table>
+    <p><%=link_to '戻る', mypages_index_path %></p>
+    <p><%= link_to 'グループ作成', new_group_path %></p>
 </div>

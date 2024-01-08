@@ -4,23 +4,40 @@ height: 150px;
 }
 
 .contents2{
-width: 50%;
-height: 150px;
 position: relative;
+left: 50px;
+width: 50%;
+height: 50px;
 z-index: 1;
 }
 
 .main{
-display: flex;
+display: block;
 gap: 50px;
 position: relative; /* 親要素に position を追加 */
 z-index: 1;
 }
-
 /* 全体のスタイル */
 body {
   margin: 10px;
 }
+
+.group-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.group-table th, .group-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.group-table th {
+  background-color: #f2f2f2;
+}
+
 
 /* メニューコンテナ全体のスタイル */
 .menu-container {
