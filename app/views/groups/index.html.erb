@@ -14,12 +14,12 @@
       <th>メンバー数</th>
       <th>メンバー名</th>
       <th>削除</th>
-      <th>退会</th>
+      <th>入退会</th>
     </tr>
 
     <% @groups.each do |e| %>
       <tr>
-        <td><%= e.name %></td>
+        <td><%= link_to e.name %></td>
         <td><%= e.member_count %></td>
         <td><%= e.member_names %></td>
         <td><%= link_to '削除', group_path(e), data: {"turbo-method": :delete} %></td>
