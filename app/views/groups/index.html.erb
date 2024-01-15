@@ -19,7 +19,7 @@
 
     <% @groups.each do |e| %>
       <tr>
-        <td><%= link_to e.name %></td>
+        <td><%= link_to e.name, events_path(e) %></td>
         <td><%= e.member_count %></td>
         <td><%= e.member_names %></td>
         <td>

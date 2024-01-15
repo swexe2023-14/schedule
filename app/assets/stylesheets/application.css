@@ -14,10 +14,9 @@ z-index: 1;
 .main{
 display: block;
 gap: 50px;
-position: relative; /* 親要素に position を追加 */
+position: relative; 
 z-index: 1;
 }
-/* 全体のスタイル */
 body {
   margin: 10px;
 }
@@ -38,8 +37,6 @@ body {
   background-color: #f2f2f2;
 }
 
-
-/* メニューコンテナ全体のスタイル */
 .menu-container {
   position: fixed;
   top: 0;
@@ -84,7 +81,7 @@ body {
   background-color: #f3f3f3;
   transition: 0.2s;
   overflow-y: auto;
-  z-index: 3; /* 他の要素よりも大きな値を設定 */
+  z-index: 3;
   pointer-events: auto; 
 }
 
@@ -111,9 +108,3 @@ body {
 .menu ul li a:hover {
   color: #bf7497;
 }
-
-/*
- *= require simple_calendar #こちらを追加
- *= require_tree .
- *= require_self
- */

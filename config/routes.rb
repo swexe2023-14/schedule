@@ -7,7 +7,12 @@ Rails.application.routes.draw do
   root 'users#index'
   resources :users
   resources :groups
+  resources :calendars
+  resources :events
   resources :joins, only: [:create, :destroy]
+  resources :groups do
+    resources :events
+  end
 end
 
 
