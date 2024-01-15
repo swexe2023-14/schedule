@@ -6,7 +6,7 @@ height: 150px;
 .contents2{
 position: relative;
 left: 50px;
-width: 50%;
+width: 95%;
 height: 50px;
 z-index: 1;
 }
@@ -17,8 +17,61 @@ gap: 50px;
 position: relative; 
 z-index: 1;
 }
+<<<<<<< HEAD
+=======
+
+/*マイページのスタイル*/
+a {
+    color: #96671a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*見出しのスタイル*/
+
+h1{
+  padding:1rem 2rem;
+  border-top: 3px dashed #5B503E;
+  border-bottom: 3px dashed #5B503E;
+  background-color: #f5deb3
+}
+
+/*入力フォームのスタイル*/
+
+label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+
+/*submitボタンのデザイン*/
+.custom-submit-button {
+  display: block;
+	text-align: center;
+	text-decoration: none;
+	width: 70px;
+	margin: 10px 0px 10px;
+	font-weight: bold;
+	color: #5B503E;
+	background:#f5deb3;
+	transition: 0.5s;
+}
+.custom-submit-button :hover{
+  color: #000000;
+  background: #ee7800;
+}
+
+/*マージン*/
+.margin{
+  margin:50px;
+}
+/* 全体のスタイル */
+>>>>>>> design
 body {
   margin: 10px;
+  color: #5B503E;
+  background-color: #FFFFFF
 }
 
 .group-table {
@@ -98,7 +151,7 @@ body {
 
 .menu ul li a {
   text-decoration: none;
-  color: blue;
+  color: #96671a;
   font-size: 18px;
   display: block;
   padding: 8px 0;

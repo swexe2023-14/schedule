@@ -6,11 +6,17 @@
     
     <div class="contents2">
         <h1>グループ作成</h1>
-        <hr>
+        <p class="dashed"></p>
         <%= form_for @group, url: {action: :create} do |f| %>
-          <%= f.label :name, 'グループ名' %>
-          <%= f.text_field :name %>
-          <%= f.submit '登録' %>
+            <p>
+                <%= f.label :name, 'グループ名' %>
+                <%= f.text_field :name %>
+            </p>
+            <p>
+                <%= f.label :pass, 'パスワード' %>
+                <%= f.text_field :pass %>
+            </p>
+          <%= f.submit '登録', class:"custom-submit-button"%>
         <% end %>
         <%=link_to '戻る', groups_path %>
     </div>

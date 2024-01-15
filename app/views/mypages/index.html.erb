@@ -5,12 +5,14 @@
     </div>
     <div class="contents2">
         <h1>マイページ</h1>
-        <p>ようこそ <%= @user.uid %> さん</p>
+        <p class="dashed"></p>
+        <h3>ようこそ <%= @user.uid %> さん</h3>
         <hr>
-        <p>自分の予定</p>
+        <h4>自分の予定</h4>
         <hr>
-
-        <p>グループ一覧</p>
+        
+        <h4>グループ一覧</h4>
+        <hr>
         <% @user_groups.each do |e| %>
         <p>
             <%= link_to e.name, group_events_path(e) %>
@@ -18,3 +20,9 @@
         <% end %>
     </div>
 </div>
+
+
+
+
+
+
