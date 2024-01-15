@@ -1,10 +1,15 @@
 <h1>ユーザー登録</h1>
+<p class="dashed"></p>
 <%= form_for @user,url: {action: :create} do |f| %>
-    <%= f.label :uid, 'ユーザーID' %>
-    <%= f.text_field :uid %><br>
-    <%= f.label :pass, 'パスワード' %>
-    <%= f.password_field :pass %><br>
-    <%= f.submit '登録' %>
+    <P>
+        <%= f.label :uid, 'ユーザーID' %>
+        <%= f.text_field :uid %>
+    </P>
+    <p>
+        <%= f.label :pass, 'パスワード' %>
+        <%= f.password_field :pass %>
+    </p>
+    <%= f.submit '登録',class:"custom-submit-button" %>
 <% end %>
 
 <%=link_to '戻る', :back%>
