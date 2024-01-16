@@ -11,4 +11,10 @@
   <%= submit_tag 'ログイン',class:"custom-submit-button" %>
 <% end %>
 
+<% @users.each do |e| %>
+    <p>
+        ユーザー名：<%= e.uid %>
+        <%= link_to '削除', user_path(e), data: {"turbo-method": :delete} %><br>
+    </p>
+<% end %>
 <%= link_to '新規追加', new_user_path %>
