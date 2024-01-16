@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'mypages/index'
   get 'users/index'
   get 'groups/new'
+  #get 'groups/:e.id', to: 'groups#show', as:'show'
   root 'users#index'
   resources :users
   resources :groups

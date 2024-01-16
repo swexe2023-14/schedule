@@ -17,8 +17,7 @@ gap: 50px;
 position: relative; 
 z-index: 1;
 }
-<<<<<<< HEAD
-=======
+
 
 /*マイページのスタイル*/
 a {
@@ -67,7 +66,7 @@ label {
   margin:50px;
 }
 /* 全体のスタイル */
->>>>>>> design
+
 body {
   margin: 10px;
   color: #5B503E;
