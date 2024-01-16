@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_01_11_055036) do
+ActiveRecord::Schema[7.0].define(version: 2024_01_16_091017) do
   create_table "calendars", force: :cascade do |t|
     t.integer "group_id"
     t.integer "event_id"
@@ -30,6 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_11_055036) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "group_pass"
   end
 
   create_table "joins", force: :cascade do |t|

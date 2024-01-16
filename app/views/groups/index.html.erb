@@ -37,13 +37,18 @@
             <% if e.joined?(current_user) %>
               <%= link_to '退会', join_path(e), data: {"turbo-method": :delete} %>
             <% else %>
-              <%= link_to '加入', joins_path(group_id: e.id), data: {"turbo-method": :post} %>
+        <%= link_to '加入', joins_path(group_id: e.id), data: {"turbo-method": :post} %>
             <% end %>
         </td>
       </tr>
     <% end %>
     </table>
+<<<<<<< HEAD
 
     <p><%=link_to '戻る', mypages_index_path ,class:"custom-submit-button"%></p>
     <p><%= link_to 'グループ作成', new_group_path ,class:"custom-submit-button"%></p>
+=======
+    <p><%=link_to '戻る', mypages_index_path %></p>
+    <p><%= link_to 'グループ作成', new_group_path %></p>
+>>>>>>> grouppass
 </div>

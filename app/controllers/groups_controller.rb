@@ -17,7 +17,7 @@ class GroupsController < ApplicationController
             render 'new'
         end
     end
-    
+
     def edit
         @group = Group.find(params[:id])
     end
@@ -26,4 +26,14 @@ class GroupsController < ApplicationController
         Group.find(params[:id]).destroy
         redirect_to groups_path
     end
+    
+    def joingroup
+        group = Group.find(params[:group_id])
+        pass = Group.find(params[:group_pass])
+        unless group.joined?(current_user) and pass.joined?(:g_pass)
+            group.join(current_user)
+        end
+        redirect_to groups_path
+    end
+    
 end

@@ -1,6 +1,7 @@
 class Group < ApplicationRecord
     has_many :joins,dependent: :destroy
     has_many :calendars, dependent: :destroy
+    has_many :events, through: :groupcalendars
     has_many :events, through: :calendars
     has_many :join_users, through: :joins, source: :user
     has_many :calendar_groups, through: :calendars, source: :event
