@@ -36,7 +36,15 @@ class EventsController < ApplicationController
   
   def edit
     @event = Event.find(params[:id])
-    redirect_to event_path(@event)
+  end
+  
+  def update
+    @event = Event.find(params[:id])
+    if @event.update(event_parameter)
+      redirect_to event_path(@event), notice: 'イベントが更新されました。'
+    else
+      render :edit
+    end
   end
   
   private

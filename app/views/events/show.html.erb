@@ -21,8 +21,8 @@
       <%= @event.comment %>
     </p>
 
-    <%= link_to '編集', edit_event_path(@event),class:"custom-submit-button" %>
-    <%= link_to '消去',event_path(@event.id), data: {"turbo-method": :delete} ,class:"custom-submit-button"%>
+    <%= link_to '編集', edit_event_path(@event), class: "custom-submit-button" %>
+    <%= link_to '消去', event_path(@event.id), data: {"turbo-method": :delete} ,class:"custom-submit-button"%>
     <%= link_to '戻る', events_path ,class:"custom-submit-button"%>
   </div>
 </div>
