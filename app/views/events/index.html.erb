@@ -32,11 +32,11 @@
 
   <div class="col-md-8">
     <%= month_calendar events: @group_events do |date, events| %>
-      <%= content_tag :div, date.day, class: current_date_class(date) %>
+      <%= date.day %>
 
       <% events.each do |event| %>
         <div>
-          <%= link_to event.content, event, class: current_date_class(event.start_time.to_date) %>
+          <%= link_to event.content, event%>
         </div>
       <% end %>
     <% end %>
