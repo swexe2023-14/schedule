@@ -5,6 +5,7 @@ height: 150px;
 
 .contents2{
 position: relative;
+margin-bottom: 50px;
 left: 50px;
 width: 95%;
 height: 50px;
@@ -17,8 +18,6 @@ gap: 50px;
 position: relative; 
 z-index: 1;
 }
-<<<<<<< HEAD
-=======
 
 /*マイページのスタイル*/
 a {
@@ -67,7 +66,7 @@ label {
   margin:50px;
 }
 /* 全体のスタイル */
->>>>>>> design
+
 body {
   margin: 10px;
   color: #5B503E;
@@ -160,4 +159,53 @@ body {
 
 .menu ul li a:hover {
   color: #bf7497;
+}
+
+table.table-striped {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+th.calendar-header, td.calendar-cell {
+  border: 1px solid #ddd;
+  padding: 8px; 
+}
+
+.calendar-day {
+ 
+}
+
+ul.event-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.event-list li {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+ul.event-list li:last-child {
+  border-bottom: none;
+}
+
+.schedule {
+  padding: 10px;
+}
+/* テーブル全体 */
+.table {
+  margin-top: 20px; /* テーブルとスケジュールの間に余白を追加 */
+}
+
+/* テーブルのセル */
+.table td, .table th {
+  text-align: center; /* セル内の文字を中央寄せにする */
+}
+
+.current-date {
+  background-color: #ffff99; /* 任意の背景色 */
 }

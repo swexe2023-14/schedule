@@ -1,8 +1,9 @@
 class Group < ApplicationRecord
     has_many :joins,dependent: :destroy
-    has_many :groupcalendars, dependent: :destroy
-    has_many :calendars, through: :groupcalendars
+    has_many :calendars, dependent: :destroy
+    has_many :events, through: :calendars
     has_many :join_users, through: :joins, source: :user
+    has_many :calendar_groups, through: :calendars, source: :event
     
     def join(user)
         joins.create(user_id: user.id)
@@ -23,5 +24,6 @@ class Group < ApplicationRecord
     def member_names
         join_users.pluck(:uid).join(', ')
     end
+    
     
 end

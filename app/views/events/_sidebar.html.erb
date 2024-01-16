@@ -1,0 +1,16 @@
+    <div class="menu-container">
+        <input type="checkbox" id="menu-toggle">
+        <nav class="menu">
+            <ul>
+                <li><a href="#"><%= link_to 'ホーム画面へ' ,mypages_index_path %></a></li>
+                <li><a href="#"><%= link_to 'グループ作成', groups_new_path %></a></li>
+                <li><a href="#"><%= link_to 'グループ一覧', groups_path %></a></li>
+                <li><a href="#"><%= link_to 'ログアウト' , top_logout_path%></a></li>
+            </ul>
+        </nav>
+        <label for="menu-toggle" class="menu-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+    </div>

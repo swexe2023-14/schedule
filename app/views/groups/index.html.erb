@@ -19,7 +19,13 @@
 
     <% @groups.each do |e| %>
       <tr>
-        <td><%= link_to e.name, events_path(e) %></td>
+        <td>
+          <% if e.joined?(current_user) %>
+              <%= link_to e.name, group_events_path(e), data: { group_id: e.id} %>
+            <% else %>
+              <%=e.name%>
+          <% end %>  
+        </td>
         <td><%= e.member_count %></td>
         <td><%= e.member_names %></td>
         <td>
@@ -37,7 +43,7 @@
       </tr>
     <% end %>
     </table>
-    <p><%= link_to '入退会', groups_show_path%></p>
-    <p><%=link_to '戻る', mypages_index_path %></p>
-    <p><%= link_to 'グループ作成', new_group_path %></p>
+
+    <p><%=link_to '戻る', mypages_index_path ,class:"custom-submit-button"%></p>
+    <p><%= link_to 'グループ作成', new_group_path ,class:"custom-submit-button"%></p>
 </div>

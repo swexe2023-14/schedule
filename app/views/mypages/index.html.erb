@@ -4,20 +4,18 @@
         <%= render "sidebar" %>
     </div>
     <div class="contents2">
-        <h1>マイページ</h1>
-        <p class="dashed"></p>
-        <h3>ようこそ <%= @user.uid %> さん</h3>
+        <h1><%= @user.uid %> さんのマイページ</h1>
         <hr>
-        <h4>自分の予定</h4>
-        <hr>
-        
-        <h4>グループ一覧</h4>
-        <hr>
+        <table class="group-table">
+            <tr>
+                <th>加入グループ一覧</th>
+            </tr>
         <% @user_groups.each do |e| %>
-        <p>
-            <%= link_to e.name, group_events_path(e) %>
-        </p>
+        <tr>
+            <td><%= link_to e.name, group_events_path(e) %></td>
+        </tr>
         <% end %>
+        </table>
     </div>
 </div>
 
